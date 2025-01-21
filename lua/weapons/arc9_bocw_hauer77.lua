@@ -29,7 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
-SWEP.SubCategory = "WIP"
+SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Hauer 77"
@@ -63,7 +63,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000010000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -74,16 +74,16 @@ SWEP.WorldModelOffset = {
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.ViewModelFOVBase = 75
+SWEP.ViewModelFOVBase = 70
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 150 -- Damage done at point blank range
+SWEP.DamageMax = 159 -- Damage done at point blank range
 SWEP.DamageMin = 0 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 5 * 39.37 -- How far bullets retain their maximum damage for.
+SWEP.RangeMin = 6.35 * 39.37 -- How far bullets retain their maximum damage for.
 SWEP.RangeMax = 20 * 39.37 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 SWEP.Distance = 20 * 39.37 -- In Hammer units, how far bullets can travel, period.
 
@@ -99,7 +99,7 @@ SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 
 SWEP.ArmorPiercing = 0.1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.HeadshotDamage = 1.4
+SWEP.HeadshotDamage = 1
 SWEP.ChestDamage = 1
 SWEP.StomachDamage = 1
 SWEP.ArmDamage = 1
@@ -117,7 +117,7 @@ SWEP.BodyDamageMults = {
 
 SWEP.AlwaysPhysBullet = true
 
-SWEP.PhysBulletMuzzleVelocity = 250 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 850 * 39.37
 SWEP.PhysBulletDrag = 1
 SWEP.PhysBulletGravity = 1
 SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
@@ -128,7 +128,7 @@ SWEP.TracerNum = 1 -- Tracer every X
 SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
 SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 200, 200)
-SWEP.TracerSize = 0.5
+SWEP.TracerSize = 1
 
 -------------------------- MAGAZINE
 
@@ -189,25 +189,35 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.1
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 2
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.6
+SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to spread, same for each pellet
+SWEP.DispersionSpread = 0.01 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
+
+SWEP.SpreadMultSights = 75
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
-SWEP.SpreadAddMidAir = 0.1
+SWEP.SpreadAddMidAir = math.rad(20 / 37.5)
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
+
+SWEP.VisualRecoil = 1
+SWEP.VisualRecoilMultSights = 0.5
+
+SWEP.VisualRecoilUp = 0.25
+SWEP.VisualRecoilSide = -0.25
+SWEP.VisualRecoilRoll = 0.1
+
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+
+SWEP.VisualRecoilPunch = 1
+SWEP.VisualRecoilMultSights = 1
 
 
 SWEP.NPCWeaponType = "weapon_shotgun"
@@ -225,17 +235,18 @@ SWEP.FreeAimRadiusMultSights = 0.25
 
 SWEP.SwayMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.275 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.233 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.25 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
 SWEP.Speed = 1
 
 SWEP.SpeedMult = 1
-SWEP.SpeedMultSights = 0.79
-SWEP.SpeedMultShooting = 0.8
-SWEP.SpeedMultMelee = 0.75
+SWEP.SpeedMultSprint = 0.706
+SWEP.SpeedMultSights = 0.8
+SWEP.SpeedMultShooting = 0.85
+SWEP.SpeedMultMelee = 0.8
 SWEP.SpeedMultCrouch = 1
 --SWEP.SpeedMultBlindFire = 1
 
@@ -324,13 +335,18 @@ SWEP.CamQCA = 3
 
 --SWEP.DoFireAnimation = true
 
+SWEP.FireInterruptInspect = true
+SWEP.SightsInterruptInspect = true
+
 SWEP.NoViewBob = false
+
+SWEP.BobSprintMult = 0.1
 
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    [0] = "tag_ammo_01_animate",
-    [1] = "tag_ammo_02_animate",
+    "tag_ammo_01_animate",
+    "tag_ammo_02_animate",
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -370,12 +386,15 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.72, -4, 1.625),
+    Pos = Vector(0, -1, 0),
     Ang = Angle(0, 0, 0),
-    Magnification = 1,
+    Magnification = 1.4,
+    Blur = true,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
     CrosshairInSights = false,
 }
+
+SWEP.MagnificationZoomSpeed = 20
 
 SWEP.HasSights = true
 
@@ -395,21 +414,26 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(0, 0, -5)
 SWEP.HolsterAng = Angle(0, -15, 25)
 
---SWEP.SprintMidPoint = {
---    Pos = Vector(4, 8, -4),
---    Ang = Angle(0, 5, -25)
---}
+SWEP.SightMidPoint = {
+    Pos = Vector(0, 0, 0),
+    Ang = Angle(0, 0, 0)
+}
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(12, 32, 4)
-SWEP.CustomizeSnapshotFOV = 90
-SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
+SWEP.CustomizePos = Vector(9, 40, 2.5)
+SWEP.CustomizeRotateAnchor = Vector(10, 0, -2)
+
+SWEP.CustomizeSnapshotFOV = 70
+SWEP.CustomizeSnapshotPos = Vector(0, 20, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false
 
 SWEP.BipodPos = Vector(0, 4, -4)
 SWEP.BipodAng = Angle(0, 0, 0)
+
+SWEP.PeekPos = Vector(-1.5, 3, -2)
+SWEP.PeekAng = Angle(0, 0.4, -35)
 
 -------------------------- HoldTypes
 
@@ -467,65 +491,50 @@ SWEP.AttachmentTableOverrides = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic", -- print name
+        PrintName = "OPTIC", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(6, 0, 2.5),
+        Pos = Vector(6.5, 0, 2.51),
         Ang = Angle(0, 0, 0),
-        DefaultName = "Iron Sights",
-        Category = {"optic_picatinny", "bo1_optic"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"optic_picatinny"},
         InstalledElements = {"optic_mount"},
     },
     {
-        PrintName = "Muzzle",
+        PrintName = "MUZZLE",
         Bone = "tag_muzzle",
-        Pos = Vector(-0.012, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bocw_12_west_muzzle", "bo1_muzzle"},
-        Attached = "bocw_muzzle_hauer77"
-    },
-    {
-        PrintName = "Underbarrel",
-        Bone = "tag_pump_animate",
-        Pos = Vector(0, 0, -0.4),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
-    },
-    {
-        PrintName = "Tactical",
-        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(25, 1, 1.6),
-        Category = {"bocw_hauer77_bodymount"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_hauer77_muzzle"},
     },
     {
-        PrintName = "Barrel",
+        PrintName = "BARREL",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(4, 0, 0),
+        Icon_Offset = Vector(2, 0, 0),
         Category = {"bocw_hauer77_barrel"},
     },
     {
-        PrintName = "Stock",
-        DefaultName = "Default Stock",
-        Bone = "tag_weapon",
-        Pos = Vector(0, 0, 0),
+        PrintName = "BODY",
+        Bone = "tag_barrel",
+        Pos = Vector(13, 0, -0.37),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-6, 0, -1),
-        Category = {"bocw_hauer77_stock"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_hauer77_body"},
     },
     {
-        PrintName = "Magazine",
+        PrintName = "MAGAZINE",
         DefaultName = "30 Rnd",
         Bone = "tag_end_cap_short",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        --Icon_Offset = Vector(0.6, 0, -2.5),
-        Category = {"bocw_hauer77_tube"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_hauer77_mag"},
+        InstalledElements = {"maggone"},
     },
     {
-        PrintName = "Handle",
+        PrintName = "HANDLE",
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -533,20 +542,32 @@ SWEP.Attachments = {
         Category = {"bocw_hauer77_wrap"},
     },
     {
-        PrintName = "Ammo Type",
-        DefaultName = "Normal Calibre",
-        Category = {"ammo_bullet", "ammo_pap"}
+        PrintName = "STOCK",
+        Bone = "tag_stock",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_hauer77_stock"},
+        InstalledElements = {"stockgone"},
     },
     {
-        PrintName = "Perk",
-        DefaultName = "No Perk",
-        Category = {"bo1_perk", "perk"}
-    },
-    {
-        PrintName = "Sound",
-        DefaultName = "BOCW Sound",
-        DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
+        PrintName = "SOUND",
+        Bone = "tag_barrel",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(6, 0, 0),
         Category = {"bocw_hauer77_sound"},
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        DefaultIcon = Material("arc9/def_att_icons/skin.png"),
+        Bone = "tag_weapon",
+        Pos = Vector(3, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 
@@ -562,6 +583,18 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
+    },
+    ["enter_sights"] = {
+        Source = "ads_in",
+        Time = 1,
+    },
+    ["idle_sights"] = {
+        Source = "idle",
+        Time = 1,
+    },
+    ["exit_sights"] = {
+        Source = "ads_out",
+        Time = 1,
     },
     ["draw"] = {
         Source = "draw",
@@ -581,10 +614,10 @@ SWEP.Animations = {
         Source = "cycle",
         EjectAt = 0.6,
         EventTable = {
-            { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.18 },
-            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.4 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.1 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.3 },
         },
-        MinProgress = 0.8,
+        MinProgress = 1,
         FireASAP = true
     },
     ["bash"] = {
@@ -609,26 +642,30 @@ SWEP.Animations = {
         Source = "reload_loop",
         MinProgress = 0.8,
         EventTable = {
-            { s = "ARC9_BOCW.Hauer77_shellin", t = 0.35 },
+            { s = "ARC9_BOCW.Hauer77_shellin", t = 0.3 },
         },
     },
     ["reload_finish"] = {
         Source = "reload_out",
         EventTable = {
             { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.2 },
-            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.45 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.5 },
         },
     },
     ["enter_sprint"] = {
         Source = "supersprint_in",
-        Time = 2
+        Time = 0.75,
+        NoStatAffectors = true
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 3
+        Time = 2,
+        NoStatAffectors = true
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 0.4,
+        NoStatAffectors = true
     },
     ["enter_inspect"] = {
         Source = "inspect",
@@ -636,7 +673,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Hauer77_reload_start", t = 0 },
             { s = "ARC9_BOCW.Hauer77_inspectvar", t = 0.7 },
             { s = "ARC9_BOCW.Hauer77_reload_start", t = 1.7 },
-            { s = "ARC9_BOCW.Hauer77_pumpback", t = 2 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 2.1 },
             { s = "ARC9_BOCW.Hauer77_pumpforward", t = 2.5 },
         },
     },
