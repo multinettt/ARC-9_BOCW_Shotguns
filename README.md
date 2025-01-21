@@ -1,22 +1,18 @@
-# ARC9 BOCW Assault Rifles DLC
+# ARC9 BOCW Shotguns
 
-6 more BOCW Assault Rifles on the base [ARC9](https://github.com/HaodongMo/ARC-9)
+2 BOCW Shotguns on the base [ARC9](https://github.com/HaodongMo/ARC-9)
 
-After the stuff I had to go through, I am finally starting making weapons again. The poll-winner Assault Rifles DLC will have 6 unique weapons that should be cool, i guess.
+Alright shotguns it is. 2 launch shotguns will be here.
 
 ## You need to have [Shared Content](https://github.com/multinettt/ARC-9_BOCW_Shared_Content) in order to avoid missing textures, materials and sounds.
 
 ## [BOCW Attachments](https://github.com/multinettt/ARC-9_BOCW_Attachments)
 
 ## Weapons List:
-### Assault Rifles:
+### Shotguns:
 
-- Groza (OTs-14 Groza)
-- FARA 83
-- C58 (CETME Model C)
-- EM2 (EM-2)
-- Grav (IMI Galil ARM)
-- Vargo 52 (VAHAN)
+- Hauer 77 (Ithaca 37)
+- Gallo SA12 (SPAS-12)
 
 ## Personalization:
 
