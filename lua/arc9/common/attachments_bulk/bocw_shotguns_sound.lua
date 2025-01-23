@@ -11,7 +11,7 @@ ATT.SortOrder = 1
 
 ATT.Category = {"bocw_hauer77_sound"}
 
-ATT.ShootSoundOverride = "ARC9_BOCW.Groza_fire_wz"
+ATT.ShootSoundOverride = "ARC9_BOCW.Hauer77_fire_wz"
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 

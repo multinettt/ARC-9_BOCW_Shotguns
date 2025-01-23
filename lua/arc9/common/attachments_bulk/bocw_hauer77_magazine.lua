@@ -46,7 +46,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeMult = 1.6
 
-ATT.ReloadTimeMult = 0.75
+ATT.ReloadTimeMult = 1.25
 
 ATT.ActivateElements = {"hauer77_mag_ext"}
 

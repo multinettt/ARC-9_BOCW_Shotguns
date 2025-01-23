@@ -21,14 +21,12 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.1
 
-ATT.ActivateElements = {"stockmountgone", "stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_hauer77_stock_tactical")
 
 ATT = {}
 
 ATT.PrintName = "Shotgun Stock" --// 2
-ATT.CompactName = "SHG STOCK"
+ATT.CompactName = "SHTGN STCK"
 ATT.Icon = Material("entities/bocw_atts/stocks/hauer77_shotgun.png", "mips smooth")
 ATT.Description = [[Classic shotgun stock increases stability for improved sprint recovery time.
 
@@ -36,7 +34,7 @@ The Shotgun Stock is a Stock attachment available exclusively for the Hauer 77 a
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_hauer77_stock"
+ATT.Category = "bocw_hauer77_stock2"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_hauer77_stock_shotgun.mdl"
 
@@ -44,7 +42,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"pump2"}
 
 ATT.SprintToFireTimeMult = 0.9
 
@@ -71,8 +69,6 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMult = 1.05
 
-ATT.ActivateElements = {"stockmountgone", "stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_hauer77_stock_duster")
 
 ATT = {}
@@ -86,7 +82,7 @@ The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives 
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_hauer77_stock"
+ATT.Category = "bocw_hauer77_stock2"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_hauer77_stock_nostock.mdl"
 
@@ -98,7 +94,7 @@ ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockmountgone", "stockgone"}
+ATT.ActivateElements = {"pump2"}
 
 ARC9.LoadAttachment(ATT, "bocw_hauer77_stock_nostock")
 
@@ -126,8 +122,6 @@ ATT.SpeedMultSighted = 1.4
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_hauer77_stock_sascombat")
 
 ATT = {}
@@ -150,8 +144,6 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MultAimDownSightsTime = 0.9
-
-ATT.ActivateElements = {"stockmountgone", "stockgone"}
 
 ATT.SprintToFireTimeMult = 1.3
 ATT.SpeedMultSighted = 1.4

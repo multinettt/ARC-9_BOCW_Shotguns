@@ -8,7 +8,7 @@
 
 --   BASE  : ARC-9
 --   BUILD : v0.1
---   SR.NO : 133105
+--   SR.NO : B71372S10052
 
 
 ooooo   ooooo                                              ooooooooo  ooooooooo 
@@ -360,7 +360,8 @@ SWEP.CaseBGs = {}
 SWEP.StripperClipBGs = {}
 
 SWEP.HideBones = {
-    "tag_ammo_01_animate"
+    "tag_ammo_01_animate",
+    "tag_ammo_02_animate"
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
      [0] = {"tag_ammo_01_animate"},
@@ -421,7 +422,7 @@ SWEP.SightMidPoint = {
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(9, 40, 2.5)
+SWEP.CustomizePos = Vector(9, 42, 2.5)
 SWEP.CustomizeRotateAnchor = Vector(10, 0, -2)
 
 SWEP.CustomizeSnapshotFOV = 70
@@ -467,10 +468,58 @@ SWEP.AttachmentElements = {
             {2, 1},
         }
     },
+    ["barrelgone"] = {
+        Bodygroups = {
+            {3, 1},
+        }
+    },
     ["stockgone"] = {
         Bodygroups = {
             {4, 1},
+            {5, 1},
         }
+    },
+    ["barrel_ultralight"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-0.87, 0, 0),
+            },
+        },
+    },
+    ["barrel_cavalrylancer"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-0.88, 0, 0),
+            },
+        },
+    },
+    ["barrel_reinforced"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(0.49, 0, 0),
+            },
+        },
+    },
+    ["barrel_ranger"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.6, 0, 0),
+            }
+        },
+    },
+    ["barrel_hammerforged"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(0.55, 0, 0),
+            }
+        },
+    },
+    ["barrel_taskforce"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(0.49, 0, 0),
+            }
+        },
     },
 }
 
@@ -512,8 +561,9 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(2, 0, 0),
+        Icon_Offset = Vector(8, 0, 0),
         Category = {"bocw_hauer77_barrel"},
+        InstalledElements = {"barrelgone"},
     },
     {
         PrintName = "BODY",
@@ -538,35 +588,54 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(0.75, 0, 0.5),
         Category = {"bocw_hauer77_wrap"},
     },
     {
         PrintName = "STOCK",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-1, 0, -1),
+        Category = {"bocw_hauer77_stock"},
+    },
+    {
+        Hidden = true,
         Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_hauer77_stock"},
+        Category = {"bocw_hauer77_stock2"},
         InstalledElements = {"stockgone"},
+        MergeSlots = {7,8}
     },
     {
         PrintName = "SOUND",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(6, 0, 0),
+        Icon_Offset = Vector(20, 0, 0),
         Category = {"bocw_hauer77_sound"},
         CosmeticOnly = true,
     },
     {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "CAMO",
+        PrintName = "CAMO",
         DefaultIcon = Material("arc9/def_att_icons/skin.png"),
         Bone = "tag_weapon",
-        Pos = Vector(3, 0, -1),
+        Pos = Vector(5, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "STICKER 1",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_hauer77_sticker1.mdl",
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "STICKER 2",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_hauer77_sticker2.mdl",
         CosmeticOnly = true,
     },
 }
@@ -575,7 +644,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
     if elements["optic_mount"] then
-        return anim .. "_optic"
+        return anim .. "_opti"
     end
 
 end
@@ -649,7 +718,7 @@ SWEP.Animations = {
         Source = "reload_out",
         EventTable = {
             { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.2 },
-            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.5 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.45 },
         },
     },
     ["enter_sprint"] = {
