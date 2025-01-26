@@ -135,7 +135,7 @@ SWEP.TracerSize = 1
 SWEP.Ammo = "buckshot" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 5 -- Self-explanatory.
+SWEP.ClipSize = 6 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -421,7 +421,7 @@ SWEP.SightMidPoint = {
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(12, 42, 2.5)
+SWEP.CustomizePos = Vector(13, 42, 2.5)
 SWEP.CustomizeRotateAnchor = Vector(12, 0, -2)
 
 SWEP.CustomizeSnapshotFOV = 70
@@ -470,54 +470,58 @@ SWEP.AttachmentElements = {
     },
     ["barrelgone"] = {
         Bodygroups = {
-            {3, 1},
+            {4, 1},
         }
     },
     ["stockgone"] = {
         Bodygroups = {
-            {4, 1},
-            {5, 1},
+            {5, 2},
         }
     },
-    ["barrel_ultralight"] = {
+    ["stockringgone"] = {
+        Bodygroups = {
+            {6, 1},
+        }
+    },
+    ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-0.87, 0, 0),
+                Pos = Vector(1.11, 0, 0),
             },
         },
     },
-    ["barrel_cavalrylancer"] = {
+    ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-0.88, 0, 0),
+                Pos = Vector(1.7, 0, 0),
             },
         },
     },
     ["barrel_reinforced"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.49, 0, 0),
+                Pos = Vector(0, 0, 0),
             },
         },
     },
     ["barrel_ranger"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.6, 0, 0),
+                Pos = Vector(2.61, 0, 0),
             }
         },
     },
     ["barrel_hammerforged"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.55, 0, 0),
+                Pos = Vector(-2.3, 0, 0),
             }
         },
     },
     ["barrel_taskforce"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.49, 0, 0),
+                Pos = Vector(2.76, 0, 0),
             }
         },
     },
@@ -555,6 +559,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_gallosa12_muzzle"},
+        Installed = "bocw_gallosa12_muzzle_base",
     },
     {
         PrintName = "BARREL",
@@ -600,15 +605,6 @@ SWEP.Attachments = {
         Category = {"bocw_gallosa12_stock"},
     },
     {
-        Hidden = true,
-        Bone = "tag_stock",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bocw_gallosa12_stock2"},
-        InstalledElements = {"stockgone"},
-        MergeSlots = {7,8}
-    },
-    {
         PrintName = "SOUND",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
@@ -645,6 +641,10 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
 
     if elements["optic_mount"] then
         return anim .. "_optic"
+    end
+
+    if elements["stockgone"] then
+        return anim .. "_nostock"
     end
 
 end

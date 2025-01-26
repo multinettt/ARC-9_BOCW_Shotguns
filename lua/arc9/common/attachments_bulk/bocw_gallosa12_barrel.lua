@@ -3,7 +3,7 @@ local ATT = {}
 ATT = {}
 
 ATT.PrintName = [[22.7" Extended]] --// 1
-ATT.CompactName = [[22.7" EXTD]]
+ATT.CompactName = [[22.7" EXTND]]
 ATT.Icon = Material("entities/bocw_atts/barrels/gallosa12_extended.png", "mips smooth")
 ATT.Description = [[Extended shotgun barrel with a chrome lined bore. Improves damage range.
 
@@ -46,7 +46,7 @@ ATT.Category = "bocw_gallosa12_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_gallosa12_barrel_cavalry.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(-1.77, 0, 0.02)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageTypeOverride = DMG_AIRBOAT
@@ -68,7 +68,7 @@ ATT.CompactName = [[21.4" HEAVY]]
 ATT.Icon = Material("entities/bocw_atts/barrels/gallosa12_reinforced.png", "mips smooth")
 ATT.Description = [[Stress relieved steel barrel to improve fire rate and damage range.
 
-The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed. The Warsaw Pact equivalent is the VDV Reinforced Barrel,]]
+The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed, while for Shotguns it loses the bullet velocity in exchange for a fire rate increase. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
 
 ATT.SortOrder = 21.4
 
@@ -77,7 +77,7 @@ ATT.Category = "bocw_gallosa12_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_gallosa12_barrel_reinforced.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(-1.77, 0, 0.02)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.RangeMaxMult = 1.12
@@ -130,7 +130,7 @@ ARC9.LoadAttachment(ATT, "bocw_gallosa12_barrel_ranger")
 ATT = {}
 
 ATT.PrintName = [[20.3" Hammer Forged]]
-ATT.CompactName = [[20.3" FORGED]]
+ATT.CompactName = [[20.3" FORGD]]
 ATT.Icon = Material("entities/bocw_atts/barrels/gallosa12_hammerforged.png", "mips smooth")
 ATT.Description = [[Shortened steel barrel with an improved gas system to increase fire rate.
 
@@ -140,10 +140,10 @@ ATT.SortOrder = 20.3
 
 ATT.Category = "bocw_gallosa12_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_gallosa12_barrel_takedown.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_gallosa12_barrel_hammerforged.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(-1.77, 0, 0.02)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.RPMMult = 1.15
@@ -162,11 +162,11 @@ ARC9.LoadAttachment(ATT, "bocw_gallosa12_barrel_hammerforged")
 ATT = {}
 
 ATT.PrintName = [[24.8" Task Force]] --// 6
-ATT.CompactName = [[24.8" TFRCE]]
+ATT.CompactName = [[24.8" TASKF]]
 ATT.Icon = Material("entities/bocw_atts/barrels/gallosa12_taskforce.png", "mips smooth")
 ATT.Description = [[Extended smooth bore barrel improves pellet damage against enemy personnel.
 
-The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Assault Rifles, Submachine Guns, and Pistols it gives increased damage, effective damage range, and bullet velocity but at the cost of increased overall recoil and the loss of a starting magazine.]]
+The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. Shotguns get a unique stat set by only getting a massive damage boost but at the cost of a reduced damage range. There is an alternate type in the Spetsnaz RPK Barrel.]]
 
 ATT.SortOrder = 24.8
 
@@ -175,7 +175,7 @@ ATT.Category = "bocw_gallosa12_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_gallosa12_barrel_taskforce.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(-1.77, 0, 0.02)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageMaxMult = 1.52
