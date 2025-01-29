@@ -182,37 +182,42 @@ SWEP.Recoil = 1
 SWEP.RecoilSide = 0.1
 SWEP.RecoilUp = 0.5
 
-SWEP.RecoilRandomUp = 0.1
-SWEP.RecoilRandomSide = 0.1
+SWEP.RecoilRandomUp = 1
+SWEP.RecoilRandomSide = 1
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
+SWEP.RecoilResetTime = 1 -- How long the gun must go before the recoil pattern starts to reset.
+SWEP.RecoilFullResetTime = 1
 
 SWEP.RecoilAutoControl = 0.1
 SWEP.RecoilKick = 2
 
-SWEP.Spread = math.rad(1.15 / 37.5)
+SWEP.Spread = 0.05
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to spread, same for each pellet
-SWEP.DispersionSpread = 0.01 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
+SWEP.UseDispersion = true -- Use this for shotguns - Additional random angle to spread, same for each pellet
+SWEP.DispersionSpread = 0 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
+SWEP.DispersionSpreadAddHipFire = 0.04
 
-SWEP.SpreadMultSights = 75
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadMultSights = 0.6
+SWEP.SpreadAddHipFire = 0.02
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = math.rad(20 / 37.5)
--- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
-SWEP.RecoilPatternDrift = 20
+SWEP.DispersionSpreadAddHipFire = 0.05
+SWEP.DispersionSpreadAddMove = math.rad(100 / 37.5)
+SWEP.DispersionSpreadAddMidAir = math.rad(20 / 37.5)
+
+SWEP.RecoilPatternDrift = 1
 
 SWEP.UseVisualRecoil = true
 
 SWEP.VisualRecoil = 1
 SWEP.VisualRecoilMultSights = 0.5
 
-SWEP.VisualRecoilUp = 0.25
-SWEP.VisualRecoilSide = -0.25
-SWEP.VisualRecoilRoll = 0.1
+SWEP.VisualRecoilUp = 0
+SWEP.VisualRecoilSide = 0
+SWEP.VisualRecoilRoll = 0
 
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 
@@ -709,7 +714,7 @@ SWEP.Animations = {
     },
     ["reload_insert"] = {
         Source = "reload_loop",
-        MinProgress = 0.8,
+        MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Hauer77_shellin", t = 0.3 },
         },
