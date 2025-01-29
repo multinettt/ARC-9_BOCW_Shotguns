@@ -153,7 +153,7 @@ ATT.SpeedMultSprint = 0.95
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_takedown"}
+ATT.ActivateElements = {"barrel_hammerforged"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 

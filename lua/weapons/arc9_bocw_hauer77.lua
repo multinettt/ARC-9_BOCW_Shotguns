@@ -402,8 +402,8 @@ SWEP.HasSights = true
 SWEP.ActivePos = Vector(0, -1.2, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-4, 1, -4)
-SWEP.CrouchAng = Angle(0, 0, -30)
+SWEP.CrouchPos = Vector(-0.5, -1, -1)
+SWEP.CrouchAng = Angle(0, 0, -10)
 
 -- Position when sprinting or safe
 SWEP.RestPos = Vector(0, -1.2, 0)
@@ -479,45 +479,45 @@ SWEP.AttachmentElements = {
             {5, 1},
         }
     },
-    ["barrel_ultralight"] = {
+    ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-0.87, 0, 0),
+                Pos = Vector(2, 0, 0),
             },
         },
     },
-    ["barrel_cavalrylancer"] = {
+    ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(-0.88, 0, 0),
+                Pos = Vector(-2, 0, 0),
             },
         },
     },
     ["barrel_reinforced"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.49, 0, 0),
+                Pos = Vector(0, 0, 0),
             },
         },
     },
     ["barrel_ranger"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.6, 0, 0),
+                Pos = Vector(4, 0, 0),
             }
         },
     },
     ["barrel_hammerforged"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.55, 0, 0),
+                Pos = Vector(-4, 0, 0),
             }
         },
     },
     ["barrel_taskforce"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.49, 0, 0),
+                Pos = Vector(5.6, 0, 0),
             }
         },
     },
@@ -554,7 +554,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_hauer77_muzzle"},
+        Category = {"bocw_shotgun_muzzle", "bocw_shotgun_muzzle_suppressor"},
     },
     {
         PrintName = "BARREL",
