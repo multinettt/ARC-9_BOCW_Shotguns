@@ -484,6 +484,11 @@ SWEP.AttachmentElements = {
             {5, 1},
         }
     },
+    ["bodymount_flashlight"] = {
+        Bodygroups = {
+            {7, 1},
+        }
+    },
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
@@ -573,10 +578,20 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_barrel",
-        Pos = Vector(13, 0, -0.37),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(12, 0.65, 0),
+        Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_hauer77_body"},
+        Category = {"bocw_xm4_body"},
+        InstalledElements = {"bodyattached"},
+    },
+    {
+        Hidden = true,
+        Bone = "tag_barrel",
+        Pos = Vector(12, 1.65, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_xm4_body_flash"},
+        InstalledElements = {"bodymount_flashlight", "bodyattached"},
+        MergeSlots = {4,5}
     },
     {
         PrintName = "MAGAZINE",
@@ -644,6 +659,16 @@ SWEP.Attachments = {
         CosmeticOnly = true,
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(self, data)
+
+    local vm = data.model
+    local attached = data.elements
+
+    if attached["bodyattached"] and attached["barrel_cavalry"] or attached["bodyattached"] and attached["barrel_hammerforged"] then
+        vm:SetBodygroup(6, 1) -- add mount when no shroud with body attached
+    end
+end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
@@ -749,6 +774,13 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Hauer77_reload_start", t = 1.8 },
             { s = "ARC9_BOCW.Hauer77_pumpback", t = 2.2 },
             { s = "ARC9_BOCW.Hauer77_pumpforward", t = 2.6 },
+        },
+    },
+    ["1_enter_inspect"] = {
+        Source = "inspect_rat",
+        EventTable = {
+            { s = "ARC9_BOCW.Hauer77_inspect_rat1", t = 0 },
+            { s = "ARC9_BOCW.Hauer77_inspect_rat2", t = 5.5 },
         },
     },
 }

@@ -4,7 +4,7 @@ ATT = {}
 
 ATT.PrintName = [[22" Extended]] --// 1
 ATT.CompactName = [[22" EXTD]]
-ATT.Icon = Material("entities/bocw_atts/barrels/hauer77_extended.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/barrels/hauer_extended.png", "mips smooth")
 ATT.Description = [[Extended shotgun barrel with a chrome lined bore. Improves damage range.
 
 Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to.]]
@@ -34,7 +34,7 @@ ATT = {}
 
 ATT.PrintName = [[20.4" Cavalry Lancer]] --// 2
 ATT.CompactName = [[20.4" CVLRY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/hauer77_cavalry.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/barrels/hauer_cavalry.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
 
 The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
@@ -65,7 +65,7 @@ ATT = {}
 
 ATT.PrintName = [[21.6" Reinforced Heavy]] --// 3
 ATT.CompactName = [[21.6" HEAVY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/hauer77_reinforced.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/barrels/hauer_reinforced.png", "mips smooth")
 ATT.Description = [[Stress relieved steel barrel to improve fire rate and damage range.
 
 The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
@@ -99,7 +99,7 @@ ATT = {}
 
 ATT.PrintName = [[24.1" Ranger]] --// 4
 ATT.CompactName = [[24.1" RANGR]]
-ATT.Icon = Material("entities/bocw_atts/barrels/hauer77_ranger.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/barrels/hauer_ranger.png", "mips smooth")
 ATT.Description = [[Extended length shotgun barrel maximizes damage range.
 
 The Ranger barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, and Shotguns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed. The Warsaw Pact equivalent is the Liberator Barrel.]]
@@ -131,7 +131,7 @@ ATT = {}
 
 ATT.PrintName = [[19.3" Hammer Forged]]
 ATT.CompactName = [[19.3" FORGD]]
-ATT.Icon = Material("entities/bocw_atts/barrels/hauer77_hammerforged.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/barrels/hauer_hammerforged.png", "mips smooth")
 ATT.Description = [[Shortened steel barrel with an improved gas system to increase fire rate.
 
 The Hammer Forged is a barrel attachment type new to Call of Duty: Black Ops Cold War available for the LW3 - Tundra Sniper Rifle and Shotguns. It gives improved fire rate at the cost for sprinting movement speed or idle sway for the LW3 - Tundra.]]
@@ -163,7 +163,7 @@ ATT = {}
 
 ATT.PrintName = [[25.2" Task Force]] --// 6
 ATT.CompactName = [[25.2" TFRCE]]
-ATT.Icon = Material("entities/bocw_atts/barrels/hauer77_taskforce.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/barrels/hauer_taskforce.png", "mips smooth")
 ATT.Description = [[Extended smooth bore barrel improves pellet damage against enemy personnel.
 
 The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. Shotguns get a unique stat set by only getting a massive damage boost but at the cost of a reduced damage range. There is an alternate type in the Spetsnaz RPK Barrel.]]

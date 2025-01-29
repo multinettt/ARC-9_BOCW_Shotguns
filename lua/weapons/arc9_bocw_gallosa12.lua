@@ -815,4 +815,10 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.GalloSA12_inspect", t = 0 },
         },
     },
+    ["1_enter_inspect"] = {
+        Source = "inspect_raygun",
+        EventTable = {
+            { s = "ARC9_BOCW.GalloSA12_inspect_raygun", t = 0 },
+        },
+    },
 }

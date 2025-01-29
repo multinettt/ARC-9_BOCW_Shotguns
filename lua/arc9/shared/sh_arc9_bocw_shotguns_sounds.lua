@@ -47,6 +47,20 @@ sound.Add({
     sound = { "weapons/arc9/bocw_hauer77/hauer77_inspectvar1.wav", "weapons/arc9/bocw_hauer77/hauer77_inspectvar2.wav", "weapons/arc9/bocw_hauer77/hauer77_inspectvar4.wav", "weapons/arc9/bocw_hauer77/hauer77_inspectvar4.wav" }
 })
 
+sound.Add({
+    name = "ARC9_BOCW.Hauer77_inspect_rat1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_hauer77/hauer77_inspect_rat1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Hauer77_inspect_rat2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_hauer77/hauer77_inspect_rat2.wav"
+})
+
 -- PULLOUT PUTAWAY
 
 sound.Add({
@@ -79,7 +93,7 @@ sound.Add({ -- WARZONE
     channel = CHAN_STATIC,
     volume = 0.7,
     level = 100,
-    sound = "weapons/arc9/bocw_hauer77/hauer77_fire_warzone.wav"
+    sound = "weapons/arc9/bocw_hauer77/hauer77_fire_wz.wav"
 })
 
 sound.Add({
@@ -154,6 +168,13 @@ sound.Add({
     sound = "weapons/arc9/bocw_gallosa12/gallosa12_inspect.wav"
 })
 
+sound.Add({
+    name = "ARC9_BOCW.GalloSA12_inspect_raygun",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_gallosa12/gallosa12_inspect_raygun.wav"
+})
+
 -- PULLOUT PUTAWAY
 
 sound.Add({
@@ -186,7 +207,7 @@ sound.Add({ -- WARZONE
     channel = CHAN_STATIC,
     volume = 0.7,
     level = 100,
-    sound = "weapons/arc9/bocw_gallosa12/gallosa12_fire_warzone.wav"
+    sound = "weapons/arc9/bocw_gallosa12/gallosa12_fire_wz.wav"
 })
 
 sound.Add({
