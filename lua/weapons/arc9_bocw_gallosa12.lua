@@ -483,6 +483,16 @@ SWEP.AttachmentElements = {
             {6, 1},
         }
     },
+    ["bodymount_lasermixbody"] = {
+        Bodygroups = {
+            {7, 1},
+        }
+    },
+    ["bodymount_flashlight"] = {
+        Bodygroups = {
+            {8, 1},
+        }
+    },
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
@@ -573,10 +583,20 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_barrel",
-        Pos = Vector(3.5, 0, -3),
+        Pos = Vector(3.5, 0, -2.44),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_gallosa12_body"},
+        Category = {"bocw_xm4_body"},
+        InstalledElements = {"bodymount_lasermixbody"},
+    },
+    {
+        Hidden = true,
+        Bone = "tag_barrel",
+        Pos = Vector(3.5, 0, -2.75),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_xm4_body_flash"},
+        InstalledElements = {"bodymount_flashlight"},
+        MergeSlots = {4,5}
     },
     {
         PrintName = "MAGAZINE",
@@ -584,7 +604,7 @@ SWEP.Attachments = {
         Bone = "tag_magazine_cap",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(5.5, 0, 0),
+        Icon_Offset = Vector(5.3, 0, 0),
         Category = {"bocw_gallosa12_mag"},
         InstalledElements = {"maggone"},
     },
@@ -635,6 +655,16 @@ SWEP.Attachments = {
         CosmeticOnly = true,
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(self, data)
+
+    local vm = data.model
+    local attached = data.elements
+
+    if attached["bocw_gallosa12_stock"] and attached["optic_mount"] then
+        vm:SetBodygroup(5, 2) -- remove unfolded stock when stock attached with optic
+    end
+end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()

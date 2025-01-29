@@ -684,7 +684,7 @@ SWEP.Animations = {
         EjectAt = 0.6,
         EventTable = {
             { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.1 },
-            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.3 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.35 },
         },
         MinProgress = 1,
         FireASAP = true
@@ -741,9 +741,9 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.Hauer77_reload_start", t = 0 },
             { s = "ARC9_BOCW.Hauer77_inspectvar", t = 0.7 },
-            { s = "ARC9_BOCW.Hauer77_reload_start", t = 1.7 },
-            { s = "ARC9_BOCW.Hauer77_pumpback", t = 2.1 },
-            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 2.5 },
+            { s = "ARC9_BOCW.Hauer77_reload_start", t = 1.8 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 2.2 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 2.6 },
         },
     },
 }

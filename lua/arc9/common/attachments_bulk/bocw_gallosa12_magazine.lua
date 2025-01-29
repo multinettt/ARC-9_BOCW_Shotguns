@@ -46,7 +46,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 8
 
-ATT.ReloadTimeMult = 1.33
+ATT.ReloadTimeMult = 1.11
 
 ATT.ActivateElements = {"gallosa12_mag_ext"}
 
