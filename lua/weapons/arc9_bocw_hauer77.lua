@@ -350,7 +350,6 @@ SWEP.BobSprintMult = 0.1
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    "tag_ammo_01_animate",
     "tag_ammo_02_animate",
 }
 SWEP.CaseBones = {}
@@ -626,7 +625,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bocw_hauer77_stock2"},
         InstalledElements = {"stockgone"},
-        MergeSlots = {7,8}
+        MergeSlots = {8,9}
     },
     {
         PrintName = "SOUND",
