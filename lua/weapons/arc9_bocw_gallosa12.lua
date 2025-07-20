@@ -7,8 +7,8 @@
 --   SWEP INFORMATION:
 
 --   BASE  : ARC9
---   BUILD : v1.0
---   SR.NO : 
+--   BUILD : v2025.7
+--   SR.NO : SA9094
 
 
   .oooooo.              oooo  oooo                .oooooo..o       .o.         .o    .oooo.   
@@ -33,7 +33,7 @@ SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Gallo SA12"
-SWEP.TrueName = "Franchi SPAS-12"
+SWEP.TrueName = "SPAS-12"
 SWEP.Class = "Shotgun"
 SWEP.Trivia = {
      Manufacturer = "Franchi",
