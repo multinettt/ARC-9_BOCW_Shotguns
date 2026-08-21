@@ -739,6 +739,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.1 },
             { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.35 },
         },
+        FireASAP = 1,
         MinProgress = 1,
         FireASAP = true
     },
@@ -753,6 +754,7 @@ SWEP.Animations = {
     },
     ["reload_start"] = {
         Source = "reload_in",
+        FireASAP = 1,
         MinProgress = 0.8,
         RestoreAmmo = 1,
         EventTable = {
@@ -762,6 +764,7 @@ SWEP.Animations = {
     },
     ["reload_insert"] = {
         Source = "reload_loop",
+        FireASAP = 1,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Hauer77_shellin", t = 0.3 },

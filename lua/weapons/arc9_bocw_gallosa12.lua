@@ -747,6 +747,7 @@ SWEP.Animations = {
     },
     ["reload_start"] = {
         Source = "reload_in",
+        FireASAP = 1,
         MinProgress = 0.8,
         RestoreAmmo = 1,
         EventTable = {
@@ -757,6 +758,7 @@ SWEP.Animations = {
     },
     ["reload_insert"] = {
         Source = "reload_loop",
+        FireASAP = 1,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.GalloSA12_shellinstart", t = 0.1 },
@@ -771,6 +773,7 @@ SWEP.Animations = {
     },
     ["reload_start_nostock"] = {
         Source = "reload_in_nostock",
+        FireASAP = 1,
         MinProgress = 0.8,
         RestoreAmmo = 1,
         EventTable = {
@@ -781,6 +784,7 @@ SWEP.Animations = {
     },
     ["reload_insert_nostock"] = {
         Source = "reload_loop_nostock",
+        FireASAP = 1,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.GalloSA12_shellinstart", t = 0.1 },
@@ -795,6 +799,7 @@ SWEP.Animations = {
     },
     ["reload_start_optic"] = {
         Source = "reload_in_optic",
+        FireASAP = 1,
         MinProgress = 0.8,
         RestoreAmmo = 1,
         EventTable = {
@@ -805,6 +810,7 @@ SWEP.Animations = {
     },
     ["reload_insert_optic"] = {
         Source = "reload_loop_optic",
+        FireASAP = 1,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.GalloSA12_shellinstart", t = 0.1 },
